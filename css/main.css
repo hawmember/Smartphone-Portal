@@ -1,21 +1,21 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+@import url('https://fonts.googleapis.com/css?family=Arimo');
 
 html {
-    color: #222;
-    font-size: 1em;
+    color: #555;
+    font-size: 100%;
     line-height: 1.4;
+    box-sizing: border-box;
+    font-family: 'Arimo', sans-serif;
 }
-
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 hr {
     display: block;
     height: 1px;
@@ -24,7 +24,6 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
-
 audio,
 canvas,
 iframe,
@@ -33,30 +32,115 @@ svg,
 video {
     vertical-align: middle;
 }
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
 textarea {
     resize: vertical;
 }
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+p {
+    padding: 8px 0px 5px;
+    margin: 0px;
 }
 
+/* ==========================================================================
+   Head
+   ========================================================================== */
+.head {
+    width: 100%;
+    height: 460px;
+    background-image: url(../img/headimg.jpg);
+    background-size: cover;
+}
+.sign {
+    position: absolute;
+    width: 30.6%;
+    height: 363px;
+    background-color: #fff;
+    top: 230px;
+    left: 0px;
+    box-shadow: 5px 5px 20px 3px rgba(0,0,0, 0.15);
+}
+.signIn {
+    z-index: 2;
+}
+.signUp {
+    z-index: 1;
+}
+.signIn-button, .signUp-button {
+    width: 50%;
+    text-align: center;
+    padding: 18px 0px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    top: -55px;
+    box-shadow: 5px 5px 20px 3px rgba(0,0,0, 0.15);
+    z-index: 1;
+    cursor: pointer;
+}
+.signIn-button {
+    left: 0px;
+    color: #72d6f6;
+}
+.signUp-button {
+    right: 0px;
+    color: #42f696;
+}
+.sign-panel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    overflow: hidden;
+}
+.active-panel {
+    z-index: 3 !important;
+}
+.sign-panel .inner {
+    width: 80%;
+    margin: 0px auto;
+    padding: 45px 0px;
+}
+.sign-panel p, .sign-panel input {
+    margin-bottom: 20px;
+}
+/* Formularfelder */
+.sign-panel form input {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: #74d4fc solid 2px; 
+    background-color: #fff;
+    font-family: 'Arimo', sans-serif;
+}
+.sign-panel form input:focus {
+    outline: none;
+}
+.sign-panel ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #999999;
+}
+.sign-panel ::-moz-placeholder { /* Firefox 19+ */
+    color: #999999;
+}
+.sign-panel :-ms-input-placeholder { /* IE 10+ */
+    color: #999999;
+}
+.sign-panel :-moz-placeholder { /* Firefox 18- */
+    color: #999999;
+}
+.sign-panel form input.submit {
+    text-align: center;
+    background-color: #74d4fc;
+    color: #fff;
+}
 
 /* ==========================================================================
-   Author's custom styles
+   Spalten und Layout
    ========================================================================== */
-
-
+.inner {
+    margin: 0px auto;
+    width: 1200px;
+    position: relative;
+}
 
 
 
