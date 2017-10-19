@@ -108,7 +108,7 @@ p {
     width: 100%;
     padding: 15px;
     box-sizing: border-box;
-    border: #74d4fc solid 2px; 
+    border: #74d4fc solid 2px;
     background-color: #fff;
     font-family: 'Arimo', sans-serif;
 }
@@ -127,6 +127,7 @@ p {
 .sign-panel :-moz-placeholder { /* Firefox 18- */
     color: #999999;
 }
+ /* Submit Button */
 .sign-panel form input.submit {
     text-align: center;
     background-color: #74d4fc;
