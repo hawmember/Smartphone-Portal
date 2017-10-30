@@ -1,11 +1,16 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 @import url('https://fonts.googleapis.com/css?family=Arimo');
 
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
 html {
     color: #555;
     font-size: 100%;
     line-height: 1.4;
-    box-sizing: border-box;
     font-family: 'Arimo', sans-serif;
 }
 ::-moz-selection {
@@ -39,7 +44,15 @@ p {
     padding: 8px 0px 5px;
     margin: 0px;
 }
-
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arimo', sans-serif;
+    font-weight: normal;
+    margin: 0px;
+}
+h1 {
+    font-style: italic;
+    font-size: 64px;
+}
 /* ==========================================================================
    Head
    ========================================================================== */
@@ -107,10 +120,17 @@ p {
 .sign-panel form input {
     width: 100%;
     padding: 15px;
+<<<<<<< Updated upstream
     box-sizing: border-box;
     border: #74d4fc solid 2px;
+=======
+    border: #74d4fc solid 2px; 
+>>>>>>> Stashed changes
     background-color: #fff;
     font-family: 'Arimo', sans-serif;
+}
+.signUp .sign-panel form input {
+    border: #42f696 solid 2px;
 }
 .sign-panel form input:focus {
     outline: none;
@@ -133,14 +153,40 @@ p {
     background-color: #74d4fc;
     color: #fff;
 }
+.signUp .sign-panel form input.submit {
+    background-color: #42f696;
+}
+/* Headline */
+.head .inner h1 {
+    color: #fff;
+    position: absolute;
+    top: 185px;
+    left: 34.6%;
+}
 
 /* ==========================================================================
    Spalten und Layout
    ========================================================================== */
+.gridwrapper {
+    width: 100%;
+    position: relative;
+}
 .inner {
     margin: 0px auto;
     width: 1200px;
     position: relative;
+}
+.col33, .col66 {
+    float: left;
+}
+.col33 + .col66 {
+    margin-left: 4%;
+}
+.col33 {
+    width: 30.6%;
+}
+.col66 {
+    width: 61.2%;
 }
 
 
