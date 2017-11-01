@@ -18,4 +18,28 @@ $( document ).ready(function() {
         showCursor: true,
     	cursorChar: "_"
 	});
+
+	// Oeffnen von Mehr Erfahren 
+	$(".handy-more .circle.action").click(function () {
+		$('.handy-info').toggleClass('open');
+		$('.handy-more .circle').toggleClass('show-button');
+	});
+
+
+	function classToggle (evt, find, toggle) {
+	    [].forEach.call(document.querySelectorAll('.' + find), function(a){
+	        a.classList[evt.type === 'mouseover' ? 'add' : 'remove'](toggle);
+	    });
+	}
+
+	var els = document.querySelectorAll('.test');
+
+	for (var i = 0, len = els.length; i<len; i++){
+	    els[i].addEventListener('mouseover', function(e){
+	        classToggle(e, 'test', 'hov');
+	    });
+	    els[i].addEventListener('mouseout', function(e){
+	        classToggle(e, 'test', 'hov');
+	    });
+	}
 });

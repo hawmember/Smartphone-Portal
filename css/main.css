@@ -48,6 +48,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Arimo', sans-serif;
     font-weight: normal;
     margin: 0px;
+    color: #555;
 }
 a {
     color: #74d4fc;
@@ -57,11 +58,20 @@ h1 {
     font-style: italic;
     font-size: 64px;
 }
+h2 {
+    font-size: 40px;   
+    font-weight: bold;
+    padding: 8px 0px 25px;
+}
 h3 {
     font-size: 28px;   
-    color: #555;
     font-weight: bold;
     padding: 16px 0px 10px;
+}
+h4 {
+    font-size: 20px;   
+    font-weight: normal;
+    padding: 8px 0px 5px;
 }
 .text-center {
     text-align: center;
@@ -242,6 +252,7 @@ h3 {
 }
 
 
+
 /* ==========================================================================
    Special Class
    ========================================================================== */
@@ -314,13 +325,115 @@ a.underline:hover:after {
     float: left;
 }
 
+/* ==========================================================================
+   Handy Model
+   ========================================================================== */
+.handy-model {
+    width: 100%;
+    padding: 45px 0px 10px;
+    background-color: #eee;
+    overflow: hidden;
+    position: relative;
+}
+.handy-model .handy-img {
+    width: 200px;
+    height: 200px;
+    margin: 0px auto 25px;
+}
+.handy-model .handy-info {
+    width: 100%;
+    padding: 0px 25px;
+    max-height: 210px;
+    overflow: hidden;
+    transition: all 1s;
+}
+.handy-model .handy-info.open {
+    max-height: 1000px;
+}
+.handy-model .handy-info .handy-release {
+    font-size: 10px;
+    margin: -5px 0px 15px;
+    padding: 0px;
+}
+.handy-model .handy-info ul {
+    list-style-type: none;
+}
+.handy-model .handy-info ul li {
+    padding: 7px 0px 7px;
+    position: relative;
+    transition: all 0.5s;
+}
+.handy-model .handy-info ul li span {
+    position: relative;
+    z-index: 1;
+}
+.handy-model .handy-info ul li:before {
+    content: '';
+    background-color: #74d4fc;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: -50%;
+    z-index: 0;
+    transition: all 0.5s;
+}
+/* $$$$$$$$$$$$ nochmal ran setzen $$$$$$$$$$$$$ */
+.handy-model .handy-info ul li.test.hov {
+    color: #fff;
+}
+.handy-model .handy-info ul li.test.hov:before {
+    display: block;
+    width: 200%;
+}
 
-
-
-
-
-
-
+/* Button fuer mehr anzeigen */
+.handy-more {
+    margin-top: 10px;
+    text-align: center;
+}
+.handy-more .circle {
+    padding: 6px;
+    border-radius: 30px;
+    border: 1px solid #555;
+    cursor: pointer;
+    display: none;
+}
+.handy-more .circle.show-button {
+    display: inline-block;
+}
+.handy-more .circle img {
+    width: 14px;
+    height: 14px;
+    height: auto;
+    float: left;
+    display: block;
+}
+.handy-more .circle.close img {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+.handy-more .circle.open:after {
+    content: 'Mehr Erfahren';
+    color: #555;
+    display: block;
+    font-size: 10px;
+    float: left;
+    margin-left: 0px;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    transition: width 0.5s;
+}
+.handy-more .circle.open:hover:after {
+    width: 65px;
+    height: 14px;
+    margin-left: 6px;
+    white-space: nowrap;
+}
 
 
 
