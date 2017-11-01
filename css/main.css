@@ -208,7 +208,7 @@ h3 {
    Spalten und Layout
    ========================================================================== */
 .allcont {
-    margin: 45px 0 0;
+    margin: 45px 0 ;
 }
 .gridwrapper {
     width: 100%;
@@ -222,18 +222,25 @@ h3 {
     width: 1200px;
     position: relative;
 }
-.col33, .col66 {
-    float: left;
+/* 4 Spalten 1:1 */
+.col25 {
+    width: 22%
 }
-.col33 + .col66, .col33 + .col33 {
-    margin-left: 4%;
-}
+/* 3 Spalten 1:1 */
 .col33 {
     width: 30.6%;
 }
+/* 2 Spalten 1:2 */
 .col66 {
     width: 65.2%;
 }
+.col25, .col33, .col66 {
+    float: left;
+}
+.col25 + .col25, .col33 + .col66, .col66 + .col33, .col33 + .col33 {
+    margin-left: 4%;
+}
+
 
 /* ==========================================================================
    Special Class
@@ -299,7 +306,6 @@ a.underline:hover:after {
 .gridwrapper.wrapper-img :-moz-placeholder { /* Firefox 18- */
     color: #999999;
 }
- /* Submit Button */
 .gridwrapper.wrapper-img form input.submit {
     text-align: center;
     background-color: #74d4fc;

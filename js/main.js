@@ -13,7 +13,7 @@ $( document ).ready(function() {
 	ityped.init('#ityped', {
 	    strings:['Finde dein passendes Smartphone'],
 	    startDelay: 500,
-	    typeSpeed:  120, //default
+	    typeSpeed:  120,
 	    loop: false, 
         showCursor: true,
     	cursorChar: "_"
