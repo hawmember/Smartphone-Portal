@@ -169,11 +169,39 @@ h3 {
     background-color: #42f696;
 }
 /* Headline */
-.head .inner h1 {
+.head .inner .typed-text {
     color: #fff;
     position: absolute;
     top: 185px;
     left: 34.6%;
+    font-size: 64px;
+}
+.head .inner .typed-text .ityped {
+    font-style: italic;
+}
+.ityped-cursor {
+    font-size: 3rem;
+    opacity: 1;
+    -webkit-animation: blink 0.45s infinite;
+    -moz-animation: blink 0.45s infinite;
+    animation: blink 0.45s infinite;
+    animation-direction: alternate;
+    margin-left: 10px;
+}
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
+    }
 }
 
 /* ==========================================================================
