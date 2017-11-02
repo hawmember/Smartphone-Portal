@@ -44,5 +44,8 @@ $( document ).ready(function() {
 			};
 		}
 	}
+	// Hier die Klassen hinzufuegen
 	hoverByClass("her");hoverByClass("spe");hoverByClass("far");hoverByClass("pre");hoverByClass("abm");hoverByClass("gew");hoverByClass("gro");hoverByClass("auf");hoverByClass("art");
+
+
 });
