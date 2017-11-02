@@ -346,10 +346,13 @@ a.underline:hover:after {
 }
 .handy-model .handy-info {
     width: 100%;
-    padding: 0px 25px;
+    /*padding: 0px 25px;*/
     max-height: 210px;
     overflow: hidden;
     transition: all 1s;
+}
+.handy-model .handy-info h4 {
+    padding: 0px 25px;
 }
 .handy-model .handy-info.open {
     max-height: 1000px;
@@ -357,13 +360,13 @@ a.underline:hover:after {
 .handy-model .handy-info .handy-release {
     font-size: 10px;
     margin: -5px 0px 15px;
-    padding: 0px;
+    padding: 0px 25px;
 }
 .handy-model .handy-info ul {
     list-style-type: none;
 }
 .handy-model .handy-info ul li {
-    padding: 7px 0px 7px;
+    padding: 7px 25px 7px;
     position: relative;
     transition: all 0.5s;
 }

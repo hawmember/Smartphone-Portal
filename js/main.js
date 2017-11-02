@@ -25,21 +25,31 @@ $( document ).ready(function() {
 		$('.handy-more .circle').toggleClass('show-button');
 	});
 
-
-	function classToggle (evt, find, toggle) {
-	    [].forEach.call(document.querySelectorAll('.' + find), function(a){
-	        a.classList[evt.type === 'mouseover' ? 'add' : 'remove'](toggle);
-	    });
+	// Higlighten aller gleichen Attribute
+	function hoverByClass(classname){
+		var elms=document.getElementsByClassName(classname);
+		for(var i=0;i<elms.length;i++){
+			elms[i].onmouseover = function(){
+				for(var k=0;k<elms.length;k++){
+					elms[k].style.backgroundColor="#74d4fc";
+					elms[k].style.color= "#fff";
+				}
+			};
+			elms[i].onmouseout = function(){
+				for(var k=0;k<elms.length;k++){
+					elms[k].style.backgroundColor= "transparent";
+					elms[k].style.color= "#555";
+				}
+			};
+		}
 	}
-
-	var els = document.querySelectorAll('.test');
-
-	for (var i = 0, len = els.length; i<len; i++){
-	    els[i].addEventListener('mouseover', function(e){
-	        classToggle(e, 'test', 'hov');
-	    });
-	    els[i].addEventListener('mouseout', function(e){
-	        classToggle(e, 'test', 'hov');
-	    });
-	}
+	hoverByClass("her");
+	hoverByClass("spe");
+	hoverByClass("far");
+	hoverByClass("pre");
+	hoverByClass("abm");
+	hoverByClass("gew");
+	hoverByClass("gro");
+	hoverByClass("auf");
+	hoverByClass("art");
 });
