@@ -137,7 +137,9 @@ h4 {
 .sign-panel .inner {
     width: 80%;
     margin: 0px auto;
+    position: relative;
     padding: 45px 0px;
+    height: 100%;
 }
 .sign-panel p, .sign-panel input {
     margin-bottom: 20px;
@@ -171,6 +173,8 @@ h4 {
 }
  /* Submit Button */
 .sign-panel form input.submit {
+    position: absolute;
+    bottom: 25px;
     text-align: center;
     background-color: #74d4fc;
     color: #fff;
