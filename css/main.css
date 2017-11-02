@@ -346,7 +346,6 @@ a.underline:hover:after {
 }
 .handy-model .handy-info {
     width: 100%;
-    /*padding: 0px 25px;*/
     max-height: 210px;
     overflow: hidden;
     transition: all 1s;
@@ -370,29 +369,6 @@ a.underline:hover:after {
     position: relative;
     transition: all 0.5s;
 }
-.handy-model .handy-info ul li span {
-    position: relative;
-    z-index: 1;
-}
-.handy-model .handy-info ul li:before {
-    content: '';
-    background-color: #74d4fc;
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: -50%;
-    z-index: 0;
-    transition: all 0.5s;
-}
-/* $$$$$$$$$$$$ nochmal ran setzen $$$$$$$$$$$$$ */
-.handy-model .handy-info ul li.test.hov {
-    color: #fff;
-}
-.handy-model .handy-info ul li.test.hov:before {
-    display: block;
-    width: 200%;
-}
 
 /* Button fuer mehr anzeigen */
 .handy-more {
@@ -404,9 +380,6 @@ a.underline:hover:after {
     border-radius: 30px;
     border: 1px solid #555;
     cursor: pointer;
-    display: none;
-}
-.handy-more .circle.show-button {
     display: inline-block;
 }
 .handy-more .circle img {
@@ -415,6 +388,7 @@ a.underline:hover:after {
     height: auto;
     float: left;
     display: block;
+    transition: all 0.5s;
 }
 .handy-more .circle.close img {
     -webkit-transform: rotate(180deg);
@@ -423,7 +397,7 @@ a.underline:hover:after {
     -ms-transform: rotate(180deg);
     transform: rotate(180deg)
 }
-.handy-more .circle.open:after {
+.handy-more .circle:after {
     content: 'Mehr Erfahren';
     color: #555;
     display: block;

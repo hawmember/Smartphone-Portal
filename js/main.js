@@ -20,9 +20,10 @@ $( document ).ready(function() {
 	});
 
 	// Oeffnen von Mehr Erfahren 
-	$(".handy-more .circle.action").click(function () {
+	$(".handy-more .circle").click(function () {
 		$('.handy-info').toggleClass('open');
-		$('.handy-more .circle').toggleClass('show-button');
+		$('.handy-more .circle').toggleClass('open');
+		$('.handy-more .circle').toggleClass('close');
 	});
 
 	// Higlighten aller gleichen Attribute
@@ -43,13 +44,5 @@ $( document ).ready(function() {
 			};
 		}
 	}
-	hoverByClass("her");
-	hoverByClass("spe");
-	hoverByClass("far");
-	hoverByClass("pre");
-	hoverByClass("abm");
-	hoverByClass("gew");
-	hoverByClass("gro");
-	hoverByClass("auf");
-	hoverByClass("art");
+	hoverByClass("her");hoverByClass("spe");hoverByClass("far");hoverByClass("pre");hoverByClass("abm");hoverByClass("gew");hoverByClass("gro");hoverByClass("auf");hoverByClass("art");
 });
