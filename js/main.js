@@ -19,6 +19,11 @@ $( document ).ready(function() {
     	cursorChar: "_"
 	});
 
+	// Suchleiste on Focus sichtbar machen
+    $(".search-input").focus( function() {
+        $(".test-t").css( "opacity", "1" );
+    });
+
 	// Oeffnen von Mehr Erfahren 
 	$(".handy-more .circle").click(function () {
 		$('.handy-info').toggleClass('open');
