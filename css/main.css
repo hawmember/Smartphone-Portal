@@ -256,6 +256,22 @@ h4 {
 }
 
 
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+    background: #75d4fe;
+    background: -moz-linear-gradient(left, #75d4fe 0%, #47f2a0 100%);
+    background: -webkit-linear-gradient(left, #75d4fe 0%,#47f2a0 100%);
+    background: linear-gradient(to right, #75d4fe 0%,#47f2a0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75d4fe', endColorstr='#47f2a0',GradientType=1 );
+    padding: 45px 0;
+    color: #fff;
+}
+footer .inner:first-of-type {
+    margin-bottom: 30px;
+}
+
 
 /* ==========================================================================
    Special Class
@@ -292,7 +308,6 @@ a.underline:hover:after {
     opacity: 0.8;
     transition: opacity 0.5s;
 }
-/* §§§§§§§§§§nochmal ran setzen§§§§§§§§§ */
 .gridwrapper.wrapper-img form:hover, .gridwrapper.wrapper-img form:focus {
     opacity: 1;
 }
