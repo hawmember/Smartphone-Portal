@@ -31,6 +31,12 @@ $( document ).ready(function() {
 		$('.handy-more .circle').toggleClass('close');
 	});
 
+	// Display aufschieben 
+	$("li.displayMain a").click(function () {
+		$('.displayMain ul').toggleClass('open');
+		$('li.displayMain a').toggleClass('close');
+	});
+
 	// Higlighten aller gleichen Attribute
 	function hoverByClass(classname){
 		var elms=document.getElementsByClassName(classname);
