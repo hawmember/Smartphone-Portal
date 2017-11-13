@@ -86,6 +86,18 @@ h4 {
     width: 100%;
     height: 460px;
     background-image: url(../img/headimg.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.head2 {
+    width: 100%;
+    height: 180px;
+    background-image: url(../img/headimg.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 .sign {
@@ -343,6 +355,136 @@ a.underline:hover:after {
     width: 7%;
     float: left;
 }
+
+/* Back Button */
+.back-link {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: block;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    margin-top: 70px;
+}
+.back-link:before {
+    content: '«';
+    display: block;
+    float: left;
+    color: #fff;
+    font-size: 35px;
+    line-height: 22px;
+    margin-right: 7px;
+}
+.back-link:after {
+    content: '';
+    height: 2px;
+    width: 15px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    animation: animationFrames linear 1.7s;
+    animation-iteration-count: infinite;
+    -webkit-animation: animationFrames linear 1.7s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: animationFrames linear 1.7s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: animationFrames linear 1.7s;
+    -o-animation-iteration-count: infinite;
+    -ms-animation: animationFrames linear 1.7s;
+    -ms-animation-iteration-count: infinite;
+}
+@keyframes animationFrames{
+  0% {
+    width: 15px;
+    right: 0px;
+    opacity: 0.1;
+  }
+  25% {
+    width: 35px;
+    opacity: 0.9;
+  }
+  65% {
+    width: 35px;
+    opacity: 0.9;
+  }
+  90% {
+    width: 15px;
+  }
+  100% {
+    right: 100px;
+    opacity: 0.1;
+  }
+}
+@-moz-keyframes animationFrames{
+  0% {
+    width: 15px;
+    right: 0px;
+    opacity: 0.1;
+  }
+  25% {
+    width: 35px;
+    opacity: 0.9;
+  }
+  65% {
+    width: 35px;
+    opacity: 0.9;
+  }
+  90% {
+    width: 15px;
+  }
+  100% {
+    right: 100px;
+    opacity: 0.1;
+  }
+}
+@-webkit-keyframes animationFrames {
+  0% {
+    width: 15px;
+    right: 0px;
+    opacity: 0.1;
+  }
+  25% {
+    width: 35px;
+    opacity: 0.9;
+  }
+  65% {
+    width: 35px;
+    opacity: 0.9;
+  }
+  90% {
+    width: 15px;
+  }
+  100% {
+    right: 100px;
+    opacity: 0.1;
+  }
+}
+@-o-keyframes animationFrames {
+  0% {
+    width: 15px;
+    right: 0px;
+    opacity: 0.1;
+  }
+  25% {
+    width: 35px;
+    opacity: 0.9;
+  }
+  65% {
+    width: 35px;
+    opacity: 0.9;
+  }
+  90% {
+    width: 15px;
+  }
+  100% {
+    right: 100px;
+    opacity: 0.1;
+  }
+}
+
 
 /* ==========================================================================
    Handy Model
