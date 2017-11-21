@@ -43,13 +43,15 @@
                             <hr />
                             <div class="filter-inner">
                                 <form class="filter-form">
-                                    <div class="filter-pre range-slider">
+                                    <!-- Preis Range Slider -->
+                                    <div class="filter-pre range-slider filter-div">
                                         <label class="blocked-label">Preis</label>
                                         <input class="filter-range" type="range" value="1319" min="269" max="1319">
                                         <span class="filter-range-value">0</span>
                                         <div class="clearfix"></div>
                                     </div>
-                                    <div class="filter-spe">
+                                    <!-- Speicher Checkboxen -->
+                                    <div class="filter-spe filter-div">
                                         <label class="blocked-label">interner Speicher</label>
                                         <label class="control control-checkbox">
                                             8gb<input type="checkbox" />
@@ -75,6 +77,18 @@
                                             256gb<input type="checkbox" />
                                             <div class="control_indicator"></div>
                                         </label>
+                                    </div>
+                                    <!-- Speicher erweiterbar On/ Off Switch -->
+                                    <div class="filter-erw filter-div">
+                                        <label>Speicher erweiterbar </label>
+                                        <div class="onoffswitch">
+                                             <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch">
+                                            <label class="onoffswitch-label" for="myonoffswitch">
+                                                <span class="onoffswitch-inner"></span>
+                                                <span class="onoffswitch-switch"></span>
+                                            </label>
+                                        </div>
+                                        <div class="clearfix"></div>
                                     </div>
                                 </form>
                             </div>

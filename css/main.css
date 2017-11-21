@@ -682,9 +682,10 @@ a.underline:hover:after {
     width: 100%;
     padding: 20px 25px;
 }
-.filter-panel .filter-inner .filter-form div:first-child {
+.filter-panel .filter-inner .filter-form div.filter-div {
+    position: relative;
+    margin-bottom: 15px;
     width: 100%;
-    margin-bottom: 25px;
 }
 .filter-panel .filter-inner .filter-form div label.blocked-label {
     display: block;
@@ -833,6 +834,7 @@ input[type=range].filter-range:focus::-ms-fill-upper {
     background: #eee;
     border: 1px solid #555;
     border-radius: 0px;
+    margin-bottom: 0px;
 }
 .control:hover input ~ .control_indicator,
 .control input:focus ~ .control_indicator {
@@ -860,6 +862,50 @@ input[type=range].filter-range:focus::-ms-fill-upper {
     transform: rotate(45deg);
 }
 
+/* On off switsch */
+.onoffswitch {
+    position: relative;
+    width: 24px;
+    float: right;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin-top: 11px;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; 
+    overflow: hidden; 
+    cursor: pointer;
+}
+.onoffswitch-inner {
+    display: block; 
+    width: 100%; 
+    background-color: #555;
+    height: 2px;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-switch {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #FC7474;
+    position: absolute;
+    top: -5px;
+    bottom: 0;
+    right: 13px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+    background-color: #74D4FC; 
+}
 
 /* ==========================================================================
    Media Queries
