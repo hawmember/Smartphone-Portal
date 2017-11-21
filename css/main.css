@@ -21,6 +21,16 @@ html {
     background: #74d4fc;
     text-shadow: none;
 }
+/* Scrollbar */
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #74d4fc;
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
 hr {
     display: block;
     height: 1px;
