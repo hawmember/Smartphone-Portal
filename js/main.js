@@ -60,3 +60,29 @@ $( document ).ready(function() {
 
 
 });
+
+$( function() {
+    var availableTags = [
+      "iPhone Generation 1",
+      "iPhone 3G",
+      "iPhone 3GS",
+      "iPhone 4",
+      "iPhone 4S",
+      "iPhone 5",
+      "iPhone 5C",
+      "iPhone 5S",
+      "iPhone SE",
+      "iPhone 6",
+      "iPhone 6 Plus",
+      "iPhone 6S",
+      "iPhone 6S Plus",
+      "iPhone 7",
+      "iPhone 7 Plus",
+      "iPhone 8",
+      "iPhone 8 Plus",
+      "iPhone X"
+    ];
+    $( ".search-input" ).autocomplete({
+      source: availableTags
+    });
+  } );
