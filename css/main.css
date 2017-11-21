@@ -14,11 +14,11 @@ html {
     font-family: 'Arimo', sans-serif;
 }
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #74d4fc;
     text-shadow: none;
 }
 ::selection {
-    background: #b3d4fc;
+    background: #74d4fc;
     text-shadow: none;
 }
 hr {
@@ -315,7 +315,7 @@ a.underline:hover:after {
     width: 60%;
     margin: 0px auto
 }
-/* Formularfelder Suche  */
+/* Suchleiste Formularfelder  */
 .gridwrapper.wrapper-img form {
     opacity: 0.8;
     transition: opacity 0.5s;
@@ -354,6 +354,30 @@ a.underline:hover:after {
     color: #fff;
     width: 7%;
     float: left;
+}
+/* Suchleiste vorgeschlagene woerter */
+.ui-widget.ui-widget-content {
+    max-height: 410px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #fff;
+    border: 2px #74d4fc solid;
+    border-top: none;
+}
+.ui-autocomplete-category {
+    font-size: 120%;    
+    font-weight: bold;
+    padding: 10px 10px 5px;
+}
+.ui-menu .ui-menu-item-wrapper {
+    color: #555;
+    padding: 3px 25px;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+    border: 1px transparent solid;
+    background: #74d4fc;
+    font-weight: normal;
+    color: #ffffff;
 }
 
 /* Back Button */
