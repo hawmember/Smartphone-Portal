@@ -37,7 +37,7 @@
             <!-- Filter/Sortier System -->
             <div class="gridwrapper">
                 <div class="inner">
-                    <div class="col25">
+                    <div class="col25"><!-- Filter Start -->
                         <div class="filter-panel">
                             <h3>Filter</h3>
                             <hr />
@@ -46,8 +46,8 @@
                                     <!-- Preis Range Slider -->
                                     <div class="filter-pre range-slider filter-div">
                                         <label class="blocked-label">Preis</label>
-                                        <input class="filter-range" type="range" value="1319" min="269" max="1319">
-                                        <span class="filter-range-value">0</span>
+                                        <input class="filter-range" type="range" value="1320" min="260" max="1320" step="10">
+                                        <span class="filter-range-value euro-sign">0</span>
                                         <div class="clearfix"></div>
                                     </div>
                                     <!-- Speicher Checkboxen -->
@@ -93,7 +93,33 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
+                    </div><!-- Filter Ende -->
+                    <div class="col25"><!-- Sortieren Start -->
+                        <div class="selected-item">
+                          <div class="option">
+                            <input type="radio" name="group" />
+                            <p>Sortieren</p>
+                          </div>
+                        </div>
+                        <div class="option-wrap">
+                          <div class="option">
+                            <input type="radio" name="group" />
+                            <p>Preis: aufsteigend</p>
+                          </div>
+                          <div class="option">
+                            <input type="radio" name="group" />
+                            <p>Preis: absteigend</p>
+                          </div>
+                          <div class="option">
+                            <input type="radio" name="group" />
+                            <p>neu nach alt</p>
+                          </div>
+                          <div class="option">
+                            <input type="radio" name="group" />
+                            <p>alt nach neu</p>
+                          </div>
+                        </div>
+                    </div><!-- Sortieren Ende -->
                     <div class="clearfix"></div>
                 </div>
             </div>
