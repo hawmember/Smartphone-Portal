@@ -60,6 +60,9 @@ $( document ).ready(function() {
 	// Hier die Klassen hinzufuegen
 	hoverByClass("her");hoverByClass("spe");hoverByClass("far");hoverByClass("pre");hoverByClass("abm");hoverByClass("gew");hoverByClass("gro");hoverByClass("auf");hoverByClass("art");
 
+	// Stick Filter Panel
+	
+
 	// Slider Wert live anzeigen 
 	var rangeSlider = function(){
 	  var slider = $('.range-slider'),
@@ -80,6 +83,14 @@ $( document ).ready(function() {
 	};
 	// Funktionen ausfuehren
 	rangeSlider();
+
+	// Tags
+	$(".tags-open").click(function () { 
+		$(".tags-item-wrap").toggleClass('active');
+	});
+	$(".tag-item").click(function () { 
+		$(this).toggleClass('active-tag');
+	});
 
 	// Sortier Checkboxen
 	$(".selected-item").click(function() {

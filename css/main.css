@@ -259,6 +259,10 @@ h4 {
     width: 1200px;
     position: relative;
 }
+/* 2 Spalten 1:1 */
+.col50 {
+    width: 48%;
+}
 /* 4 Spalten 1:1 */
 .col25 {
     width: 22%
@@ -271,10 +275,17 @@ h4 {
 .col66 {
     width: 65.2%;
 }
-.col25, .col33, .col66 {
+.col25, .col33, .col66, .col50 {
     float: left;
+    position: relative;
 }
-.col25 + .col25, .col33 + .col66, .col66 + .col33, .col33 + .col33 {
+.col25 + .col25, 
+.col33 + .col66, 
+.col66 + .col33, 
+.col33 + .col33, 
+.col50 + .col50,
+.col25 + .col50,
+.col50 + .col25 {
     margin-left: 4%;
 }
 
@@ -291,6 +302,7 @@ footer {
     padding: 45px 0;
     color: #fff;
     font-size: 120%;
+    margin-top: 90px;
 }
 footer .inner:first-of-type {
     margin-bottom: 30px;
@@ -666,6 +678,14 @@ a.underline:hover:after {
     width: 100%;
     background-color: #eee;
     padding: 10px 0px;
+    position: absolute;
+    z-index: 9999;
+    border-bottom: 1px solid #555;
+    max-height: 100vh;
+}
+.filter-panel.sticky {
+    position: fixed;
+    top: 0px;
 }
 .filter-panel h3 {
     padding: 0px 25px;
@@ -681,12 +701,18 @@ a.underline:hover:after {
 }
 .filter-panel .filter-inner {
     width: 100%;
-    padding: 20px 25px;
+    padding: 20px 0px;
 }
 .filter-panel .filter-inner .filter-form div.filter-div {
     position: relative;
     margin-bottom: 15px;
     width: 100%;
+    padding: 0px 25px 15px;
+    border-bottom: 1px solid #555;
+}
+.filter-panel .filter-inner .filter-form div.filter-div:last-child {
+    padding: 0px 25px 0px;
+    border: none;
 }
 .filter-panel .filter-inner .filter-form div label.blocked-label {
     display: block;
@@ -804,6 +830,11 @@ input[type=range].filter-range:focus::-ms-fill-upper {
 }
 .filter-range-value.euro-sign:after {
     content: ' €';
+}
+.filter-range-value.zoll-sign:after {
+    content: '"';
+}
+.filter-range-value:after {
     display: inline-block;
     margin-left: 3px;
 }
@@ -909,14 +940,22 @@ input[type=range].filter-range:focus::-ms-fill-upper {
 }
 
 /* ==========================================================================
-   selected item
+    Tags
    ========================================================================== */
-.selected-item {
+.tags-panel {
     position: relative;
-    width: 100%;
-    height: 57px;
+    width: 100%; 
+    background-color: #eee;
 }
-.selected-item:after {
+.tags-open {
+    color: #555555;
+    position: relative;
+    cursor: pointer;
+    padding: 0px 25px;
+    background-color: #eee;
+    border-bottom: 1px solid #555;
+}
+.tags-open:after {
   content: '';
   display: block;
   position: absolute;
@@ -927,11 +966,81 @@ input[type=range].filter-range:focus::-ms-fill-upper {
   pointer-events: none;
   border-style: solid;
   border-width: 8px 5px 0 5px;
-  border-color: #7b7b7b transparent transparent transparent;
+  border-color: #555555 transparent transparent transparent;
+}
+.tags-open:hover {
+    background: #ddd;
+}
+.tags-open span {
+    line-height: 56px;
+    font-size: 26px;
+}
+.tags-item-wrap {
+    display: none;
+    height: auto;
+    background-color: #eee;
+    padding: 10px 25px 0px;
+    position: absolute;
+    width: 100%;
+    z-index: 9999;
+    border-bottom: 1px solid #555;
+}
+.tags-item-wrap.active {
+    display: block;
+}
+.tag-item {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #74D4FC;
+    padding: 5px 10px;
+    color: #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.tag-item:last-child {
+    margin-right: 0px;
+}
+.tag-item:before {
+    content: '–';
+    margin-right: 5px;
+    display: inline-block;
+    font-weight: bold;
+}
+.tag-item.active-tag {
+    background-color: #47f2a0;
+}
+.tag-item.active-tag:before {
+    content: '+';
+}
+
+/* ==========================================================================
+   selected item
+   ========================================================================== */
+.selected-item {
+    position: relative;
+    width: 100%;
+    height: 57px;
+}
+.selected-item:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #555555 transparent transparent transparent;
 }
 .option-wrap {
-  display: none;
-  border: 1px solid #e6e6e6;
+    display: none;
+    border: 1px solid #e6e6e6;
+    position: absolute;
+    z-index: 9999;
 }
 .option {
     color: #555555;
@@ -946,23 +1055,21 @@ input[type=range].filter-range:focus::-ms-fill-upper {
     line-height: 56px;
     font-size: 26px;
 }
-/*.option-wrap .option p {
-    font-size: 26px;
-}*/
 .option:hover {
-  background: #ddd;
+    background: #ddd;
 }
 .option input {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.active {
-  display: block;
+.active {  
+    display: block;
 }
+
 
 /* ==========================================================================
    Media Queries
