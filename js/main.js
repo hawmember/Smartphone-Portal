@@ -10,7 +10,7 @@ $( document ).ready(function() {
 	});
 
 	// Selbstschreibender Text auf der Startseite
-	if ( $(".main-site").length) { // checkt ob man auf der startseite ist
+	if ( $(".typed-text").length) { // checkt ob man auf der startseite ist
 		ityped.init('#ityped', {
 		    strings:['Finde dein passendes Smartphone'],
 		    startDelay: 500,
@@ -33,11 +33,6 @@ $( document ).ready(function() {
 		$('.handy-more .circle').toggleClass('close');
 	});
 
-	// Display aufschieben 
-	$("li.displayMain a").click(function () {
-		$('.displayMain ul').toggleClass('open');
-		$('li.displayMain a').toggleClass('close');
-	});
 
 	// Higlighten aller gleichen Attribute
 	function hoverByClass(classname){
@@ -58,9 +53,18 @@ $( document ).ready(function() {
 		}
 	}
 	// Hier die Klassen hinzufuegen
-	hoverByClass("her");hoverByClass("spe");hoverByClass("far");hoverByClass("pre");hoverByClass("abm");hoverByClass("gew");hoverByClass("gro");hoverByClass("auf");hoverByClass("art");
+	hoverByClass("her");hoverByClass("spe");hoverByClass("far");hoverByClass("pre");hoverByClass("abm");hoverByClass("gew");hoverByClass("speE");hoverByClass("bet");hoverByClass("pro");hoverByClass("arb");hoverByClass("atot");hoverByClass("acpu");hoverByClass("aux");hoverByClass("a3d");hoverByClass("aram");hoverByClass("dgro");hoverByClass("dauf");hoverByClass("dart");hoverByClass("fmeg");hoverByClass("fauf");hoverByClass("fbli");hoverByClass("fvid");hoverByClass("rmeg");hoverByClass("rauf");hoverByClass("rbli");hoverByClass("rvid");hoverByClass("dtot");hoverByClass("dfot");hoverByClass("dvid");hoverByClass("alau");hoverByClass("atyp");hoverByClass("akap");hoverByClass("awec");hoverByClass("mob");hoverByClass("spr");hoverByClass("ans");hoverByClass("kop");hoverByClass("ama");
 
-	// Stick Filter Panel
+
+	// oeffnen von mehr informationen
+	function openMore(selectedContent) {
+		$(selectedContent + ' a').click(function () {
+			$(selectedContent + ' ul').toggleClass('open');
+			$(selectedContent + ' a').toggleClass('close');
+		});
+	}
+	// Hier die lassen hinzufuegen 
+	openMore('.displayMain');openMore('.antutuMain');openMore('.frontKameraMain');openMore('.ruckKameraMain');openMore('.dxomarkMain');openMore('.akkuMain');
 	
 
 	// Slider Wert live anzeigen 
